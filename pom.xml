@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>amp.youtube.manager.bean</groupId>
+  <artifactId>amp-youtube-manager-bean</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>ejb</packaging>
+  <name>amp-youtube-manager-bean</name>
+  
+  <parent>
+  	<groupId>amp.framework</groupId>
+  	<artifactId>amp-framework</artifactId>
+  	<version>1.0-SNAPSHOT</version>
+  </parent>
+  
+  <properties>
+  	<org.slf4j-version>1.7.5</org.slf4j-version>
+    <jcl-over-slf4j.version>1.7.5</jcl-over-slf4j.version>
+   	<jersey.version>1.17.1</jersey.version>
+  </properties>
+  
+  <build>
+    <finalName>amp-youtube-manager-bean</finalName>
+    <sourceDirectory>src/main/java</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+	    <groupId>org.apache.maven.plugins</groupId>
+	    <artifactId>maven-jar-plugin</artifactId>
+	    <version>2.3.2</version>
+	    <configuration>
+	        <fileNameMapping>@{artifactId}@</fileNameMapping>
+	        
+	    </configuration>
+	  </plugin>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.3</version><!--$NO-MVN-MAN-VER$-->
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-ejb-plugin</artifactId>
+        <version>2.3</version>
+        <configuration>
+          <ejbVersion>3.1</ejbVersion>
+          
+          <fileNameMapping>@{artifactId}@</fileNameMapping>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>build-helper-maven-plugin</artifactId>
+          <executions>
+              <execution>
+                  <phase>generate-sources</phase>
+                  <goals>
+                      <goal>add-source</goal>
+                  </goals>
+                  <configuration>
+                      <sources>
+                          <source>src/test/java</source>
+                      </sources>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>
+      
+      <plugin>
+       <groupId>org.apache.maven.plugins</groupId>
+       <artifactId>maven-jar-plugin</artifactId>
+       <version>3.0.2</version>
+       <executions>
+         <execution>
+           <goals>
+             <goal>test-jar</goal>
+           </goals>
+         </execution>
+       </executions>
+     </plugin>
+     
+    </plugins>
+  </build>
+  <dependencies>
+  
+  	<dependency>
+      <groupId>junit</groupId>
+	  <artifactId>junit</artifactId>
+	  <version>4.12</version>
+    </dependency>
+    
+  	<dependency>
+  		<groupId>log4j</groupId>
+  		<artifactId>log4j</artifactId>
+  		<version>1.2.12</version>
+  	</dependency>
+ 
+  	<dependency>
+    	<groupId>amp.jpa.entities</groupId>
+    	<artifactId>amp-jpa-entities</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+  	
+  	<dependency>
+    	<groupId>amp.common.api</groupId>
+  		<artifactId>amp-common-api</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+      <groupId>amp.youtube.api</groupId>
+      <artifactId>amp-youtube-api</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>amp.data.handler</groupId>
+  		<artifactId>amp-data-handler</artifactId>
+  		<version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    	 	
+	<dependency>
+	    <groupId>amp.text.processor.api</groupId>
+	    <artifactId>amp-text-processor-api</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
+	
+	<!-- https://mvnrepository.com/artifact/javax.enterprise.concurrent/javax.enterprise.concurrent-api -->
+	<dependency>
+	    <groupId>javax.enterprise.concurrent</groupId>
+	    <artifactId>javax.enterprise.concurrent-api</artifactId>
+	    <version>1.0</version>
+	</dependency>
+	
+    <dependency>
+        <groupId>com.sun.jersey</groupId>
+        <artifactId>jersey-json</artifactId>
+        <version>${jersey.version}</version>
+    </dependency>
+    
+	<dependency>
+	    <groupId>com.sun.jersey</groupId>
+	    <artifactId>jersey-client</artifactId>
+	    <version>${jersey.version}</version>
+	</dependency>
+	 
+	<dependency>
+        <groupId>javax.mail</groupId>
+        <artifactId>mail</artifactId>
+        <version>1.4</version>
+    </dependency>
+    
+	<dependency>
+	    <groupId>javax</groupId>
+	    <artifactId>javaee-api</artifactId>
+	    <version>6.0</version>
+	</dependency>
+	
+  </dependencies>
+  
+ 
+  
+</project>

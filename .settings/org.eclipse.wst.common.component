@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="amp-fb-manager-bean">
+        <wb-resource deploy-path="/" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/" source-path="/src/test/java"/>
+        <property name="java-output-path" value="/amp-fb-manager-bean/build/classes"/>
+        <property name="ClientProject" value="amp-fb-worker-beanClient"/>
+        <property name="ClientJARURI" value="amp-fb-worker-beanClient.jar"/>
+    </wb-module>
+</project-modules>

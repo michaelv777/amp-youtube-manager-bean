@@ -1,0 +1,10 @@
+amp\source\youtube\impl\YoutubeWorker.class
+amp\source\youtube\base\SourceManagerBean.class
+amp\source\youtube\base\SourceManagerStorage.class
+amp\source\youtube\base\ThreadWorker.class
+amp\source\youtube\worker\ManagedThreadFactoryImpl$ManagedThread.class
+amp\source\youtube\worker\ManagedThreadFactoryImpl.class
+amp\source\youtube\worker\YoutubeManagerBean.class
+amp\youtube\worker\TestFacebookWorkerBean.class
+amp\source\youtube\interfaces\SourceWorkerBeanRemote.class
+amp\source\youtube\interfaces\SourceWorkerBeanLocal.class
